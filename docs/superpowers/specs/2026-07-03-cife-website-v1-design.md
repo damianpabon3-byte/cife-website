@@ -173,6 +173,7 @@ Deliberately minimal, appropriate to a static brochure site: render.js guards on
 
 ## Future (out of scope, noted for the client conversation)
 
+- **English version (confirmed, post-refinement):** an EN option will be added after the Spanish content is finalized. v1 deliberately doesn't build i18n plumbing; when the time comes, the likely shape is either mirrored pages under `/en/` or a JS string-swap layer — decide then. For now this only means: keep copy in semantic, well-structured blocks so it's easy to mirror later.
 - Real text/photos per page (client to provide).
 - Contact or enrollment form via a static-friendly form service.
 - Transparent-background logo (PNG/SVG) for more header flexibility.
