@@ -71,7 +71,7 @@ How it works:
 - Every page contains `<header id="site-header"></header>` and `<footer id="site-footer"></footer>` plus `<script src="js/include.js" defer></script>`.
 - `include.js` holds the header and footer markup as template strings and injects them on `DOMContentLoaded`.
 - **Active link highlighting:** each page's `<body>` carries `data-page="inicio|about|services|…"`; `include.js` adds an `.active` class to the matching nav link.
-- **Mobile nav:** below 768px the nav collapses behind a hamburger button; `include.js` wires the toggle. No third-party code.
+- **Mobile nav:** below 900px the nav collapses behind a hamburger button (768px originally; widened because 7 Spanish nav labels don't fit at ~800px); `include.js` wires the toggle. No third-party code.
 - The header placeholder gets a CSS `min-height` matching the rendered header so injection causes no layout shift.
 
 Trade-off accepted: with JS disabled the nav/footer don't render. Irrelevant for this audience, and consistent with the data.js requirement.
@@ -154,7 +154,7 @@ Deliberately minimal, appropriate to a static brochure site: render.js guards on
 
 ## Responsive Behavior
 
-- Breakpoints: single-column mobile-first CSS; nav collapses to hamburger `< 768px`; grids step 1 → 2 → 3 columns.
+- Breakpoints: single-column mobile-first CSS; nav collapses to hamburger `< 900px`; grids step 1 → 2 → 3 columns.
 - Images: `max-width: 100%`, gallery grid uses `aspect-ratio` boxes with `object-fit: cover` so mixed-size real photos won't break the layout later.
 
 ## Verification Plan
