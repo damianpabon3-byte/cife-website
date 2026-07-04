@@ -50,6 +50,84 @@
     "home.cta.title": "What families say",
     "home.cta.sub": "Stories from families who trusted CIFE.",
     "home.cta.btn": "Read testimonials",
+
+    // ---- Común / Shared ----
+    "common.example.short": "Example text: a brief description.",
+
+    // ---- Sobre Nosotros / About ----
+    "about.eyebrow": "About Us",
+    "about.title": "Who we are",
+    "about.intro": "Example text: an introductory paragraph about CIFE's history, when it was founded, and the community it serves in Vega Alta.",
+    "about.mission.title": "Mission",
+    "about.mission.body": "Example text: CIFE's mission — to provide individualized educational support that helps every student reach their potential.",
+    "about.vision.title": "Vision",
+    "about.vision.body": "Example text: CIFE's vision — to be the leading center for educational support and homeschooling in the region.",
+    "about.values.title": "Our values",
+    "about.value.compromiso": "Commitment",
+    "about.value.respeto": "Respect",
+    "about.value.excelencia": "Excellence",
+
+    // ---- Servicios / Services ----
+    "services.eyebrow": "Services",
+    "services.title": "How we support your student",
+    "services.intro": "Example text: an introductory paragraph about CIFE's educational approach.",
+    "services.s1.title": "K-12 Tutoring",
+    "services.s1.desc": "Example text: a description of the tutoring service — subjects covered, grades served, individual or group format.",
+    "services.s1.item": "Example text: subject or benefit included",
+    "services.s2.title": "Homeschooling Program",
+    "services.s2.desc": "Example text: a description of the home education program — curriculum, parent guidance, registration and documentation.",
+    "services.s2.item": "Example text: program component",
+    "services.s3.title": "Academic Preparation",
+    "services.s3.desc": "Example text: a description of academic reinforcement, test preparation, and study skills.",
+    "services.s3.item": "Example text: preparation area",
+    "services.cta.title": "Interested in enrolling your student?",
+    "services.cta.sub": "Example text: an invitation to reach out for a no-commitment orientation.",
+
+    // ---- Por Qué Elegirnos / Why Us ----
+    "why.eyebrow": "Why Choose Us?",
+    "why.title": "The CIFE difference",
+    "why.intro": "Example text: a brief paragraph about what sets CIFE apart from other educational options.",
+    "why.f1.title": "Certified teachers",
+    "why.f2.title": "Individualized attention",
+    "why.f3.title": "Safe environment",
+    "why.f4.title": "Flexible schedules",
+    "why.f5.title": "A family feel",
+    "why.f6.title": "Continuous follow-up",
+    "why.stat.years": "Years of experience",
+    "why.stat.students": "Students served",
+    "why.stat.grades": "All grade levels",
+    "why.stat.commit": "Commitment",
+    "why.stats.note": "Example numbers — they will be updated with real data.",
+    "why.cta.title": "Meet us in person",
+    "why.cta.sub": "Example text: an invitation to visit the center or ask for more information.",
+    "why.cta.btn": "Go to Contact",
+
+    // ---- Galería / Gallery ----
+    "gallery.eyebrow": "Gallery",
+    "gallery.title": "Our center in photos",
+    "gallery.sub": "Example images — they will be replaced with real photos of the center.",
+
+    // ---- Testimonios / Testimonials ----
+    "testimonials.eyebrow": "Testimonials",
+    "testimonials.title": "What families say",
+    "testimonials.sub": "Example testimonials — they will be replaced with real ones.",
+    "testimonials.cta.title": "Become part of the CIFE family",
+    "testimonials.cta.sub": "Example text: an invitation to explore our services.",
+    "testimonials.cta.btn": "See services",
+
+    // ---- Contacto / Contact ----
+    "contact.eyebrow": "Contact",
+    "contact.title": "We're here for you",
+    "contact.sub": "Example text: an invitation to reach out through whichever channel you prefer.",
+    "contact.phone": "Phone",
+    "contact.phone.value": "(787) 000-0000 — example number",
+    "contact.wa.link": "Message us on WhatsApp",
+    "contact.note": "— example",
+    "contact.email": "Email",
+    "contact.address": "Address",
+    "contact.address.value": "Example text: 123 Main Street, Vega Alta, PR 00692",
+    "contact.hours": "Hours",
+    "contact.hours.value": "Example text: Monday to Friday, 8:00 AM – 5:00 PM",
   };
 
   const STORAGE_KEY = "cife-lang";
