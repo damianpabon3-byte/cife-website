@@ -3,17 +3,20 @@
 (() => {
   "use strict";
 
-  const EMPTY_NOTE = '<p class="empty-note">Contenido próximamente.</p>';
+  const lang = () => (typeof window.cifeLang === "function" ? window.cifeLang() : "es");
+  const pick = (item, field) => (lang() === "en" && item[field + "En"] ? item[field + "En"] : item[field]);
+  const emptyNote = () =>
+    `<p class="empty-note">${lang() === "en" ? "Coming soon." : "Contenido próximamente."}</p>`;
 
   function renderGallery() {
     const grid = document.getElementById("gallery-grid");
     if (!grid) return;
     const items = typeof GALLERY !== "undefined" && Array.isArray(GALLERY) ? GALLERY : [];
-    if (items.length === 0) { grid.innerHTML = EMPTY_NOTE; return; }
+    if (items.length === 0) { grid.innerHTML = emptyNote(); return; }
     grid.innerHTML = items.map((item) => `
       <figure class="gallery-item">
-        <img src="${item.src}" alt="${item.alt}" loading="lazy">
-        <figcaption>${item.caption}</figcaption>
+        <img src="${item.src}" alt="${pick(item, "alt")}" loading="lazy">
+        <figcaption>${pick(item, "caption")}</figcaption>
       </figure>`).join("");
   }
 
@@ -21,19 +24,19 @@
     const list = document.getElementById("testimonials-list");
     if (!list) return;
     const items = typeof TESTIMONIALS !== "undefined" && Array.isArray(TESTIMONIALS) ? TESTIMONIALS : [];
-    if (items.length === 0) { list.innerHTML = EMPTY_NOTE; return; }
+    if (items.length === 0) { list.innerHTML = emptyNote(); return; }
     list.innerHTML = items.map((t) => `
       <blockquote class="testimonial-card">
-        <p class="testimonial-quote">“${t.quote}”</p>
+        <p class="testimonial-quote">“${pick(t, "quote")}”</p>
         <footer>
           <span class="testimonial-name">${t.name}</span>
-          <span class="testimonial-role">${t.role}</span>
+          <span class="testimonial-role">${pick(t, "role")}</span>
         </footer>
       </blockquote>`).join("");
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    renderGallery();
-    renderTestimonials();
-  });
+  function renderAll() { renderGallery(); renderTestimonials(); }
+
+  document.addEventListener("DOMContentLoaded", renderAll);
+  window.addEventListener("cife:lang", renderAll);
 })();

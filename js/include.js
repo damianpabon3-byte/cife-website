@@ -14,19 +14,26 @@
 
   function buildHeader(activePage) {
     const links = NAV_LINKS.map(
-      (l) => `<li><a href="${l.href}"${l.page === activePage ? ' class="active"' : ""}>${l.label}</a></li>`
+      (l) => `<li><a href="${l.href}"${l.page === activePage ? ' class="active"' : ""} data-i18n="nav.${l.page}">${l.label}</a></li>`
     ).join("");
     return `
       <div class="header-inner container">
         <a href="index.html" class="brand">
           <img src="assets/logo.jpeg" alt="CIFE — Centro de Instrucciones y Formación Educativa">
         </a>
-        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
         <nav class="site-nav">
           <ul>${links}</ul>
         </nav>
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+            <button type="button" data-lang="es" aria-pressed="true">ES</button>
+            <span class="sep">·</span>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>`;
   }
 
@@ -34,20 +41,20 @@
     return `
       <div class="footer-inner container">
         <div class="footer-col footer-brand">
-          <img src="assets/logo.jpeg" alt="CIFE">
-          <p>Centro de Instrucciones y Formación Educativa — apoyo educativo K-12 en Vega Alta, Puerto Rico.</p>
+          <div class="logo-plate"><img src="assets/logo.jpeg" alt="CIFE"></div>
+          <p data-i18n="footer.tagline">Centro de Instrucciones y Formación Educativa — apoyo educativo K-12 en Vega Alta, Puerto Rico.</p>
         </div>
         <div class="footer-col">
-          <h3>Enlaces</h3>
+          <h3 data-i18n="footer.links">Enlaces</h3>
           <ul>
-            <li><a href="services.html">Servicios</a></li>
-            <li><a href="gallery.html">Galería</a></li>
-            <li><a href="testimonials.html">Testimonios</a></li>
-            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="services.html" data-i18n="nav.servicios">Servicios</a></li>
+            <li><a href="gallery.html" data-i18n="nav.galeria">Galería</a></li>
+            <li><a href="testimonials.html" data-i18n="nav.testimonios">Testimonios</a></li>
+            <li><a href="contact.html" data-i18n="nav.contacto">Contacto</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Contacto</h3>
+          <h3 data-i18n="footer.contact">Contacto</h3>
           <ul>
             <li>Vega Alta, Puerto Rico</li>
             <li>(787) 000-0000</li>
