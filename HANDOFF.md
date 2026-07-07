@@ -82,7 +82,7 @@ Confirmed still open as of this handoff (roughly in priority order once the clie
 ## 7. Deploy pipeline
 
 - Hosting is **Porkbun static hosting with GitHub Connect** on `centroeducativocife.com`, connected to this repo's `main`.
-- **Unverified:** whether Porkbun auto-deploys on push or needs a manual re-sync in the Porkbun dashboard. After the next push to `main`, check `curl -sI https://centroeducativocife.com | grep -i last-modified` — if it doesn't update within a few minutes, Damian needs to trigger a sync in Porkbun's dashboard (he has the account).
+- **Unverified:** whether Porkbun auto-deploys on push or needs a manual re-sync in the Porkbun dashboard. Data point: right after this file was pushed (commit `39deed9`, 2026-07-06), `https://centroeducativocife.com/HANDOFF.md` returned 404 — so deploys are at minimum not instant, possibly manual-only. To settle it: check that URL later; if it's still 404 the next session, Damian needs to trigger a sync in Porkbun's dashboard (he has the account) after every push.
 - No CI, no build — whatever is on `main` is the site.
 
 ## 8. How to develop and verify (tricks that already burned us)
