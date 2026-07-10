@@ -59,7 +59,8 @@
 
     // ---- Sobre Nosotros / About ----
     "about.eyebrow": "About Us",
-    "about.title": "Who we are",
+    "about.titlePre": "Who we ",
+    "about.titleHl": "are",
     "about.intro": "Example text: an introductory paragraph about CIFE's history, when it was founded, and the community it serves in Vega Alta.",
     "about.mission.title": "Mission",
     "about.mission.body": "Example text: CIFE's mission — to provide individualized educational support that helps every student reach their potential.",
@@ -91,7 +92,9 @@
 
     // ---- Por Qué Elegirnos / Why Us ----
     "why.eyebrow": "Why Choose Us?",
-    "why.title": "The CIFE difference",
+    "why.titlePre": "The ",
+    "why.titleHl": "CIFE",
+    "why.titlePost": " difference",
     "why.intro": "Example text: a brief paragraph about what sets CIFE apart from other educational options.",
     "why.f1.title": "Certified teachers",
     "why.f2.title": "Individualized attention",
@@ -104,7 +107,8 @@
     "why.stat.grades": "All grade levels",
     "why.stat.commit": "Commitment",
     "why.stats.note": "Example numbers — they will be updated with real data.",
-    "why.cta.title": "Meet us in person",
+    "why.cta.titlePre": "Meet us in ",
+    "why.cta.titleHl": "person",
     "why.cta.sub": "Example text: an invitation to visit the center or ask for more information.",
     "why.cta.btn": "Go to Contact",
 
