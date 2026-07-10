@@ -31,7 +31,8 @@
     "title.contacto": "Contact | CIFE",
 
     // ---- Inicio / Home ----
-    "home.hero.title": "Helping every student discover their potential",
+    "home.hero.titlePre": "Helping every student discover their ",
+    "home.hero.titleHl": "potential",
     "home.hero.sub": "At CIFE we walk alongside Vega Alta families with K-12 tutoring, homeschooling, and academic prep — in a warm, safe environment tailored to each child.",
     "home.hero.cta1": "Explore our services",
     "home.hero.cta2": "Contact us",
@@ -47,7 +48,9 @@
     "home.why.title": "Why CIFE?",
     "home.why.sub": "More than tutoring: we are an educational community committed to your children's success.",
     "home.why.cta": "See the reasons",
-    "home.cta.title": "What families say",
+    "home.cta.titlePre": "What ",
+    "home.cta.titleHl": "families",
+    "home.cta.titlePost": " say",
     "home.cta.sub": "Stories from families who trusted CIFE.",
     "home.cta.btn": "Read testimonials",
 
@@ -56,7 +59,8 @@
 
     // ---- Sobre Nosotros / About ----
     "about.eyebrow": "About Us",
-    "about.title": "Who we are",
+    "about.titlePre": "Who we ",
+    "about.titleHl": "are",
     "about.intro": "Example text: an introductory paragraph about CIFE's history, when it was founded, and the community it serves in Vega Alta.",
     "about.mission.title": "Mission",
     "about.mission.body": "Example text: CIFE's mission — to provide individualized educational support that helps every student reach their potential.",
@@ -69,7 +73,8 @@
 
     // ---- Servicios / Services ----
     "services.eyebrow": "Services",
-    "services.title": "How we support your student",
+    "services.titlePre": "How we support your ",
+    "services.titleHl": "student",
     "services.intro": "Example text: an introductory paragraph about CIFE's educational approach.",
     "services.s1.title": "K-12 Tutoring",
     "services.s1.desc": "Example text: a description of the tutoring service — subjects covered, grades served, individual or group format.",
@@ -80,12 +85,16 @@
     "services.s3.title": "Academic Preparation",
     "services.s3.desc": "Example text: a description of academic reinforcement, test preparation, and study skills.",
     "services.s3.item": "Example text: preparation area",
-    "services.cta.title": "Interested in enrolling your student?",
+    "services.cta.titlePre": "Interested in ",
+    "services.cta.titleHl": "enrolling",
+    "services.cta.titlePost": " your student?",
     "services.cta.sub": "Example text: an invitation to reach out for a no-commitment orientation.",
 
     // ---- Por Qué Elegirnos / Why Us ----
     "why.eyebrow": "Why Choose Us?",
-    "why.title": "The CIFE difference",
+    "why.titlePre": "The ",
+    "why.titleHl": "CIFE",
+    "why.titlePost": " difference",
     "why.intro": "Example text: a brief paragraph about what sets CIFE apart from other educational options.",
     "why.f1.title": "Certified teachers",
     "why.f2.title": "Individualized attention",
@@ -98,26 +107,32 @@
     "why.stat.grades": "All grade levels",
     "why.stat.commit": "Commitment",
     "why.stats.note": "Example numbers — they will be updated with real data.",
-    "why.cta.title": "Meet us in person",
+    "why.cta.titlePre": "Meet us in ",
+    "why.cta.titleHl": "person",
     "why.cta.sub": "Example text: an invitation to visit the center or ask for more information.",
     "why.cta.btn": "Go to Contact",
 
     // ---- Galería / Gallery ----
     "gallery.eyebrow": "Gallery",
-    "gallery.title": "Our center in photos",
+    "gallery.titlePre": "Our center in ",
+    "gallery.titleHl": "photos",
     "gallery.sub": "Example images — they will be replaced with real photos of the center.",
 
     // ---- Testimonios / Testimonials ----
     "testimonials.eyebrow": "Testimonials",
-    "testimonials.title": "What families say",
+    "testimonials.titlePre": "What ",
+    "testimonials.titleHl": "families",
+    "testimonials.titlePost": " say",
     "testimonials.sub": "Example testimonials — they will be replaced with real ones.",
-    "testimonials.cta.title": "Become part of the CIFE family",
+    "testimonials.cta.titlePre": "Become part of the ",
+    "testimonials.cta.titleHl": "CIFE family",
     "testimonials.cta.sub": "Example text: an invitation to explore our services.",
     "testimonials.cta.btn": "See services",
 
     // ---- Contacto / Contact ----
     "contact.eyebrow": "Contact",
-    "contact.title": "We're here for you",
+    "contact.titlePre": "We're here for ",
+    "contact.titleHl": "you",
     "contact.sub": "Example text: an invitation to reach out through whichever channel you prefer.",
     "contact.phone": "Phone",
     "contact.phone.value": "(787) 000-0000 — example number",
