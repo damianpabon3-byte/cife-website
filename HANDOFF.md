@@ -55,6 +55,7 @@ js/include.js        ← injects shared header/footer into every page; hamburger
 js/i18n.js           ← ES/EN engine + the ENTIRE English dictionary (I18N_EN)
 js/data.js           ← testimonials + gallery content (data-driven pages render from this)
 js/render.js         ← renders TESTIMONIALS/GALLERY from data.js; language-aware
+js/reveal.js         ← v3.1 scroll-reveal (IntersectionObserver); must load LAST; JS-off = static site
 assets/logo.png      ← transparent logo used by header AND footer (v3; regen recipe in v3 spec §5)
 assets/logo.jpeg     ← client logo original (white background) — SOURCE ONLY since v3
 assets/hero-placeholder.svg ← index hero placeholder image (v3)

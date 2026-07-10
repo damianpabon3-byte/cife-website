@@ -509,8 +509,13 @@ main section { padding: 72px 0; }
 .footer-bottom p { margin: 0; font-size: 0.82rem; color: rgba(255, 255, 255, 0.8); }
 
 /* ---------- Motion ---------- */
+/* Reveal on scroll (v3.1) — js/reveal.js adds .reveal, then .revealed in-view */
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
+.reveal.revealed { opacity: 1; transform: translateY(0); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
 }
 
 /* ---------- Responsive ---------- */
