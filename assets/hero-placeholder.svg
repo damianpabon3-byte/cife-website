@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" role="img" aria-label="Imagen de ejemplo">
+  <rect width="1000" height="800" fill="#EAF7F5"/>
+  <circle cx="830" cy="130" r="190" fill="#D9F1EF"/>
+  <circle cx="170" cy="680" r="230" fill="#F7E9EE"/>
+  <rect x="320" y="290" width="360" height="220" rx="16" fill="#FFFFFF" stroke="#4DC4C0" stroke-width="6"/>
+  <text x="500" y="408" text-anchor="middle" font-family="sans-serif" font-size="36" fill="#157874">Foto del centro</text>
+  <text x="500" y="452" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#5B6663">imagen de ejemplo</text>
+</svg>

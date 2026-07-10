@@ -19,7 +19,7 @@
     return `
       <div class="header-inner container">
         <a href="index.html" class="brand">
-          <img src="assets/logo.jpeg" alt="CIFE — Centro de Instrucciones y Formación Educativa">
+          <img src="assets/logo.png" alt="CIFE — Centro de Instrucciones y Formación Educativa">
         </a>
         <nav class="site-nav">
           <ul>${links}</ul>
@@ -41,7 +41,7 @@
     return `
       <div class="footer-inner container">
         <div class="footer-col footer-brand">
-          <div class="logo-plate"><img src="assets/logo.jpeg" alt="CIFE"></div>
+          <img class="footer-logo" src="assets/logo.png" alt="CIFE">
           <p data-i18n="footer.tagline">Centro de Instrucciones y Formación Educativa — apoyo educativo K-12 en Vega Alta, Puerto Rico.</p>
         </div>
         <div class="footer-col">
