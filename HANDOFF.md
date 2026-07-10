@@ -104,8 +104,15 @@ Confirmed still open as of this handoff (roughly in priority order once the clie
 
 ## 7. Deploy pipeline
 
-- Hosting is **Porkbun static hosting with GitHub Connect** on `centroeducativocife.com`, connected to this repo's `main`.
-- **Unverified:** whether Porkbun auto-deploys on push or needs a manual re-sync in the Porkbun dashboard. Data point: right after this file was pushed (commit `39deed9`, 2026-07-06), `https://centroeducativocife.com/HANDOFF.md` returned 404 — so deploys are at minimum not instant, possibly manual-only. To settle it: check that URL later; if it's still 404 the next session, Damian needs to trigger a sync in Porkbun's dashboard (he has the account) after every push.
+- Hosting is **GitHub Pages** (since 2026-07-10): branch build from `main`, path `/`, custom
+  domain `centroeducativocife.com` (see the repo's `CNAME` file; `.nojekyll` skips Jekyll).
+  **Every push to `main` deploys automatically** — no dashboard, no sync step.
+- Porkbun is **DNS/registrar only** now. The old Porkbun static hosting (GitHub Connect) was
+  abandoned 2026-07-10 because its sync was unreliable (v3 never propagated after 30+ min).
+  Apex A records point at GitHub Pages IPs (185.199.108–111.153), `www` CNAME →
+  `damianpabon3-byte.github.io`.
+- After changing the custom domain, re-enable **Enforce HTTPS** once GitHub issues the cert
+  (`gh api repos/damianpabon3-byte/cife-website/pages -X PUT -f https_enforced=true`).
 - No CI, no build — whatever is on `main` is the site.
 
 ## 8. How to develop and verify (tricks that already burned us)
