@@ -114,14 +114,18 @@
 
     // ---- Galería / Gallery ----
     "gallery.eyebrow": "Gallery",
-    "gallery.title": "Our center in photos",
+    "gallery.titlePre": "Our center in ",
+    "gallery.titleHl": "photos",
     "gallery.sub": "Example images — they will be replaced with real photos of the center.",
 
     // ---- Testimonios / Testimonials ----
     "testimonials.eyebrow": "Testimonials",
-    "testimonials.title": "What families say",
+    "testimonials.titlePre": "What ",
+    "testimonials.titleHl": "families",
+    "testimonials.titlePost": " say",
     "testimonials.sub": "Example testimonials — they will be replaced with real ones.",
-    "testimonials.cta.title": "Become part of the CIFE family",
+    "testimonials.cta.titlePre": "Become part of the ",
+    "testimonials.cta.titleHl": "CIFE family",
     "testimonials.cta.sub": "Example text: an invitation to explore our services.",
     "testimonials.cta.btn": "See services",
 
