@@ -131,7 +131,8 @@
 
     // ---- Contacto / Contact ----
     "contact.eyebrow": "Contact",
-    "contact.title": "We're here for you",
+    "contact.titlePre": "We're here for ",
+    "contact.titleHl": "you",
     "contact.sub": "Example text: an invitation to reach out through whichever channel you prefer.",
     "contact.phone": "Phone",
     "contact.phone.value": "(787) 000-0000 — example number",
