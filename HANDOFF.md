@@ -105,16 +105,25 @@ Confirmed still open as of this handoff (roughly in priority order once the clie
 
 ## 7. Deploy pipeline
 
-- Hosting is **GitHub Pages** (since 2026-07-10): branch build from `main`, path `/`, custom
-  domain `centroeducativocife.com` (see the repo's `CNAME` file; `.nojekyll` skips Jekyll).
-  **Every push to `main` deploys automatically** — no dashboard, no sync step.
-- Porkbun is **DNS/registrar only** now. The old Porkbun static hosting (GitHub Connect) was
-  abandoned 2026-07-10 because its sync was unreliable (v3 never propagated after 30+ min).
-  Apex A records point at GitHub Pages IPs (185.199.108–111.153), `www` CNAME →
-  `damianpabon3-byte.github.io`.
-- After changing the custom domain, re-enable **Enforce HTTPS** once GitHub issues the cert
-  (`gh api repos/damianpabon3-byte/cife-website/pages -X PUT -f https_enforced=true`).
-- No CI, no build — whatever is on `main` is the site.
+**Rewritten 2026-07-10 (late).** A GitHub Pages migration was attempted and ABANDONED the
+same day — do not resurrect it (Pages is disabled on this repo, domain unclaimed).
+The real pipeline is a **two-repo setup**:
+
+- **This repo (`damianpabon3-byte/cife-website`) is the DEV repo** — source of truth,
+  including docs. It does NOT deploy anywhere.
+- **A separate client-account repo** (name/account unknown — ask Damian; created by him
+  2026-07-10) feeds **Porkbun static hosting via GitHub Connect** on
+  `centroeducativocife.com`. That connect DOES auto-sync within minutes of a change.
+- **Deploy flow:** restage `~/cife-deploy` (rsync from this repo, excluding `.git`,
+  `docs/`, `HANDOFF.md`, `.superpowers/`, `.gitignore`) → **Damian manually uploads** its
+  contents to the client repo. Offer to automate (second remote + push script) once he
+  grants access to the client repo.
+- **CDN cache trap (bit us on v3 launch):** Porkbun's CDN caches assets with
+  `max-age=2592000` (30 days). HTML revalidates but css/js/images do NOT — a release
+  that changes them without new URLs serves mixed old/new content and looks broken.
+  Therefore all css/js references carry a `?v=N` query param — **bump N in all 7 pages
+  on every release that touches css/js** (currently `?v=4`).
+- No CI, no build — whatever reaches the client repo is the site.
 
 ## 8. How to develop and verify (tricks that already burned us)
 
@@ -132,7 +141,7 @@ Confirmed still open as of this handoff (roughly in priority order once the clie
 
 ## 10. First moves when work resumes
 
-1. Read this file, then skim `docs/superpowers/specs/2026-07-03-cife-website-v2-design.md` for design rationale.
+1. Read this file, then skim the v3 spec (`docs/superpowers/specs/2026-07-10-cife-website-v3-design.md`) for the current design system; the v2 spec is historical.
 2. `git -C ~/cife-website pull` and `git status` — confirm clean and current.
 3. Ask Damian what the client sent back (content? feedback? new requests?) — that decides whether the session is a content pass (mechanical, follow §4's editing contract) or a v3 feature round (brainstorm first).
 4. If content arrived: Spanish → HTML, English → `i18n.js`, testimonials/photos → `data.js` + `assets/gallery/`. Verify both languages on every touched page before pushing.
