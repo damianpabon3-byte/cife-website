@@ -31,7 +31,8 @@
     "title.contacto": "Contact | CIFE",
 
     // ---- Inicio / Home ----
-    "home.hero.title": "Helping every student discover their potential",
+    "home.hero.titlePre": "Helping every student discover their ",
+    "home.hero.titleHl": "potential",
     "home.hero.sub": "At CIFE we walk alongside Vega Alta families with K-12 tutoring, homeschooling, and academic prep — in a warm, safe environment tailored to each child.",
     "home.hero.cta1": "Explore our services",
     "home.hero.cta2": "Contact us",
@@ -47,7 +48,9 @@
     "home.why.title": "Why CIFE?",
     "home.why.sub": "More than tutoring: we are an educational community committed to your children's success.",
     "home.why.cta": "See the reasons",
-    "home.cta.title": "What families say",
+    "home.cta.titlePre": "What ",
+    "home.cta.titleHl": "families",
+    "home.cta.titlePost": " say",
     "home.cta.sub": "Stories from families who trusted CIFE.",
     "home.cta.btn": "Read testimonials",
 
