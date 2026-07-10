@@ -21,9 +21,23 @@ secondary, toggleable language.
 
 ## 2. Where the project stands (verified 2026-07-06)
 
-- **v1** (full 7-page client draft) and **v2** (client audit response) are both **merged to `main` and pushed**. Working tree clean, in sync with `origin/main`.
+- **v1** (full 7-page client draft), **v2** (client audit response), and **v3** (design refresh, 2026-07-10) are all **merged to `main` and pushed**. Working tree clean, in sync with `origin/main`.
 - **The site is DEPLOYED and LIVE.** Verified 2026-07-06: `https://centroeducativocife.com` returns 200 and serves the current `index.html` byte-for-byte (last-modified 2026-07-04, the day after the v2 merge).
 - **Current phase: waiting on the client** (the teacher) for the next feedback round and, most importantly, **real content** — final text and real photos. Nothing is blocked on our side.
+
+### What v3 delivered (merged 2026-07-10)
+Client design-review response ("bland, too centered, too white, more blue/green, missing charm").
+Full visual refresh, spec/plan in `docs/superpowers/` dated 2026-07-10:
+- **"Papel Cuadriculado" system:** graph-paper grid background site-wide, deep-teal ink
+  (`--color-ink #0F4F4C`) as structural color (header rule, stats band, footer), lime as
+  highlighter accents, crimson demoted to CTAs/links. Fraunces replaced Poppins for headings.
+- Asymmetric index hero, left-aligned `.page-head` on interior pages, alternating service
+  rows (`.service` + `.flip`), paper-cutout shadows (`.cutout`), coupon CTAs (`.cta-coupon`),
+  CSS-only school-supply doodles (`.doodle-pencil/-ruler/-book/-plane`).
+- **Transparent logo** `assets/logo.png` generated from the JPEG via ImageMagick edge
+  floodfill (recipe in the v3 spec §5); `.logo-plate` is gone; `logo.jpeg` stays as source only.
+- Headlines with lime swipes are **split into `data-i18n` spans** — see §4 before touching them.
+- Gallery placeholder SVGs lost their v2 bottom accent strips (clashed with cutout shadows).
 
 ### What v2 delivered (already live)
 - Bigger logo: 64px header / 52px footer, sitting on a white `.logo-plate` (the logo file is a white-background JPEG on a crimson header — the plate is the workaround, see §6).
@@ -41,7 +55,9 @@ js/include.js        ← injects shared header/footer into every page; hamburger
 js/i18n.js           ← ES/EN engine + the ENTIRE English dictionary (I18N_EN)
 js/data.js           ← testimonials + gallery content (data-driven pages render from this)
 js/render.js         ← renders TESTIMONIALS/GALLERY from data.js; language-aware
-assets/logo.jpeg     ← client logo (white background — the .logo-plate exists because of this)
+assets/logo.png      ← transparent logo used by header AND footer (v3; regen recipe in v3 spec §5)
+assets/logo.jpeg     ← client logo original (white background) — SOURCE ONLY since v3
+assets/hero-placeholder.svg ← index hero placeholder image (v3)
 assets/gallery/      ← foto-01..06.svg = PLACEHOLDER images awaiting real photos
 docs/colors.jpeg     ← client-provided brand palette reference
 docs/superpowers/    ← v1 + v2 design specs and implementation plans (read these for full rationale)
@@ -57,6 +73,13 @@ This is the most load-bearing design decision in the codebase:
 - Persistence: `localStorage` key **`cife-lang`**. Language switches dispatch a **`cife:lang`** CustomEvent; `render.js` listens and re-renders the data-driven pages.
 - `data.js` items use paired fields: `quote`/`quoteEn`, `role`/`roleEn`, `alt`/`altEn`, `caption`/`captionEn`. `render.js`'s `pick()` falls back to Spanish when the `…En` field is missing.
 - **Trap:** `data-i18n` must only sit on **pure-text elements**. Putting it on an element with child nodes makes the textContent swap delete those children. If mixed content needs translating, wrap the text in a `<span data-i18n="…">`.
+- **v3 split headlines:** every h1 (and coupon h2) with a lime `.hl` highlight is split into
+  sibling spans keyed `…titlePre` / `…titleHl` / optionally `…titlePost`. Two rules:
+  (1) trailing spaces inside span text are load-bearing; (2) the engine's truthiness check
+  means an **EN value must never be empty** — a span may be empty on the Spanish side only
+  (written `<span data-i18n="…"></span>` with zero inner whitespace, e.g. `why.titlePost`
+  is ES `""` / EN `" difference"`). Editing these headlines means editing both the HTML
+  spans and the matching `I18N_EN` keys together.
 
 **Damian's editing contract** (he maintains content himself between Claude sessions):
 | Change | Edit |
@@ -75,7 +98,7 @@ Confirmed still open as of this handoff (roughly in priority order once the clie
 
 1. **Real content pass** — swap placeholder text and gallery SVGs for client-provided text/photos. This is the certain next work item.
 2. **Contact/enrollment form** — currently contact info + Google Maps embed only. Client originally wanted online enrollment (was phone-only). Needs a form service (Formspree or similar) since Porkbun static hosting has no backend. Scope question from the original brief was never answered: does the form just *collect* info, or *process* enrollment? Ask before building.
-3. **Transparent logo** — ask the client for a transparent-background PNG/SVG; then the `.logo-plate` white plate can be removed or slimmed.
+3. ~~**Transparent logo**~~ — RESOLVED in v3 with a DIY ImageMagick knockout (`assets/logo.png`). A client-provided vector original would still be a quality upgrade if one ever appears, but nothing is blocked.
 4. **Social media links** — teacher was to provide handles; never arrived.
 5. **EN SEO** — `hreflang`/mirrored pages, only if English discoverability ever matters. The JS toggle is invisible to crawlers; don't bother unless asked.
 
