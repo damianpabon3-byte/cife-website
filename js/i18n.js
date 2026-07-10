@@ -72,7 +72,8 @@
 
     // ---- Servicios / Services ----
     "services.eyebrow": "Services",
-    "services.title": "How we support your student",
+    "services.titlePre": "How we support your ",
+    "services.titleHl": "student",
     "services.intro": "Example text: an introductory paragraph about CIFE's educational approach.",
     "services.s1.title": "K-12 Tutoring",
     "services.s1.desc": "Example text: a description of the tutoring service — subjects covered, grades served, individual or group format.",
@@ -83,7 +84,9 @@
     "services.s3.title": "Academic Preparation",
     "services.s3.desc": "Example text: a description of academic reinforcement, test preparation, and study skills.",
     "services.s3.item": "Example text: preparation area",
-    "services.cta.title": "Interested in enrolling your student?",
+    "services.cta.titlePre": "Interested in ",
+    "services.cta.titleHl": "enrolling",
+    "services.cta.titlePost": " your student?",
     "services.cta.sub": "Example text: an invitation to reach out for a no-commitment orientation.",
 
     // ---- Por Qué Elegirnos / Why Us ----
