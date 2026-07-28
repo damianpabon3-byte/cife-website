@@ -69,11 +69,11 @@
     "about.vision.body": "To become an Educational Center recognized and distinguished for the tools it provides toward the formation of critical thinkers, fully equipped to effectively exercise their social roles within the diverse environments in which they operate.",
     "about.values.title": "Our values",
     "about.value.compromiso": "Commitment",
-    "about.value.compromiso.body": "Our commitment goes beyond the classroom; it is an unwavering educational and social pact with the future of our country. We are passionately dedicated to discovering and providing new formative tools that ensure the intellectual and personal growth of every student. We don't just teach; we stand by our students as they develop into well-rounded individuals, fully prepared to make a positive impact in their communities.",
+    "about.value.compromiso.body": "We hold an unwavering pact with the future of our community, providing innovative tools to ensure the intellectual and personal growth of every student.",
     "about.value.respeto": "Respect",
-    "about.value.respeto.body": "We foster a learning ecosystem where dignity, diversity of thought, and human values are the foundation of every interaction. We believe in an empathetic education that honors each student's individuality and seamlessly adapts to generational changes. At CIFE, we create a safe, inclusive space where mutual respect empowers our students to flourish with confidence and freedom.",
+    "about.value.respeto.body": "We foster an empathetic and inclusive learning ecosystem, honoring individuality and adapting to generational changes so our students can flourish with confidence.",
     "about.value.excelencia": "Excellence",
-    "about.value.excelencia.body": "We are defined by our relentless pursuit of the highest educational quality. We do not settle for the status quo; we design innovative strategies tailored to today's reality to reinforce and elevate academic skills. Our ultimate goal is to shape capable, critical thinkers, ensuring that our services respond effectively and agilely to the genuine needs of our students and their families.",
+    "about.value.excelencia.body": "We relentlessly pursue the highest educational quality through innovative strategies, aiming to shape critical thinkers equipped for today's challenges.",
 
     // ---- Servicios / Services ----
     "services.eyebrow": "Services",
