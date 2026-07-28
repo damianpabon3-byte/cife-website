@@ -18,7 +18,8 @@
     "nav.contacto": "Contact",
 
     // ---- Pie de página / Footer ----
-    "footer.tagline": "Centro de Instrucciones y Formación Educativa — K-12 educational support in Vega Alta, Puerto Rico.",
+    "footer.tagline": "Center for Integral Formative Education — K-12 educational support in Vega Alta, Puerto Rico.",
+    "footer.legalName": "Center for Integral Formative Education",
     "footer.links": "Links",
     "footer.contact": "Contact",
 
@@ -61,15 +62,18 @@
     "about.eyebrow": "About Us",
     "about.titlePre": "Who we ",
     "about.titleHl": "are",
-    "about.intro": "Example text: an introductory paragraph about CIFE's history, when it was founded, and the community it serves in Vega Alta.",
+    "about.intro": "CIFE, Center for Integral Formative Education, is dedicated to reinforcing a variety of academic skills. We are driven by an educational and social commitment to our community. We aspire to cultivate an environment of respect within our center—one that promotes core values and a commitment to seeking new educational tools that contribute to intellectual growth. We strive to ensure our services adapt to generational changes and respond effectively to the needs of our clients.",
     "about.mission.title": "Mission",
-    "about.mission.body": "Example text: CIFE's mission — to provide individualized educational support that helps every student reach their potential.",
+    "about.mission.body": "To contribute to the holistic development of our students. To foster—through the use of diverse strategies adapted to our current reality—the continuous pursuit of expanding and reinforcing various skills that contribute to the development of more well-rounded individuals and institutions.",
     "about.vision.title": "Vision",
-    "about.vision.body": "Example text: CIFE's vision — to be the leading center for educational support and homeschooling in the region.",
+    "about.vision.body": "To become an Educational Center recognized and distinguished for the tools it provides toward the formation of critical thinkers, fully equipped to effectively exercise their social roles within the diverse environments in which they operate.",
     "about.values.title": "Our values",
     "about.value.compromiso": "Commitment",
+    "about.value.compromiso.body": "Our commitment goes beyond the classroom; it is an unwavering educational and social pact with the future of our country. We are passionately dedicated to discovering and providing new formative tools that ensure the intellectual and personal growth of every student. We don't just teach; we stand by our students as they develop into well-rounded individuals, fully prepared to make a positive impact in their communities.",
     "about.value.respeto": "Respect",
+    "about.value.respeto.body": "We foster a learning ecosystem where dignity, diversity of thought, and human values are the foundation of every interaction. We believe in an empathetic education that honors each student's individuality and seamlessly adapts to generational changes. At CIFE, we create a safe, inclusive space where mutual respect empowers our students to flourish with confidence and freedom.",
     "about.value.excelencia": "Excellence",
+    "about.value.excelencia.body": "We are defined by our relentless pursuit of the highest educational quality. We do not settle for the status quo; we design innovative strategies tailored to today's reality to reinforce and elevate academic skills. Our ultimate goal is to shape capable, critical thinkers, ensuring that our services respond effectively and agilely to the genuine needs of our students and their families.",
 
     // ---- Servicios / Services ----
     "services.eyebrow": "Services",
