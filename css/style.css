@@ -312,11 +312,11 @@ main section { padding: 72px 0; }
 }
 .page-head h1 { margin-bottom: 0.3em; max-width: 620px; }
 .page-head p { color: var(--color-text-muted); max-width: 540px; margin: 0; }
-/* Long intro paragraphs: two columns fill the row without stretching the
-   line length past a readable measure. Single column once the row narrows. */
-.page-head p.lede { max-width: none; columns: 2; column-gap: 56px; }
+/* Long intro paragraphs run the full width of the row. Set larger than body
+   copy so the line count drops instead of the characters-per-line climbing. */
+.page-head p.lede { max-width: none; font-size: 1.3rem; line-height: 1.6; }
 @media (max-width: 900px) {
-  .page-head p.lede { columns: 1; max-width: 620px; }
+  .page-head p.lede { font-size: 1.05rem; line-height: 1.65; }
 }
 
 /* ---------- Cards ---------- */
