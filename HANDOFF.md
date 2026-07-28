@@ -95,7 +95,7 @@ Remaining body copy marked `"Texto de ejemplo…"` / `"Example text: …"` is **
 
 **Pages with real, client-supplied copy** (do not touch without a new client document):
 - **Homepage** — approved bilingual hero/section copy.
-- **About Us** — delivered 2026-07-28 from `Visión, Misión y Perfil.docx`, which arrived already bilingual (Spanish + the client's own English). Covers the intro, mission, vision, and all three value descriptions.
+- **About Us** — delivered 2026-07-28 from `Visión, Misión y Perfil.docx`, which arrived already bilingual (Spanish + the client's own English). Covers the intro, mission, vision, and all three value descriptions. The client sent a revised `…NEW.docx` the same day that **shortened the three value descriptions to one sentence each**; intro/mission/vision were unchanged. If another revision arrives, diff it against the previous one — only some sections move.
   That document is also the source for CIFE's official name: **Centro Integral Formativo Educativo** / *Center for Integral Formative Education*. The site previously shipped "Centro de Instrucciones y Formación Educativa" everywhere (header alt, footer tagline, copyright, index title) — all corrected 2026-07-28. If the client ever disputes the expansion, it lives in `js/include.js`, `index.html`, and the `footer.tagline`/`footer.legalName` keys.
   Verbatim except three transcription artifacts: double spaces, a space before a period, and a stray semicolon inside the mission's comma-parenthetical ("estrategias diversas; atemperadas") that the client's own English rendering does not have.
 
@@ -128,7 +128,7 @@ The real pipeline is a **two-repo setup**:
   `max-age=2592000` (30 days). HTML revalidates but css/js/images do NOT — a release
   that changes them without new URLs serves mixed old/new content and looks broken.
   Therefore all css/js references carry a `?v=N` query param — **bump N in all 7 pages
-  on every release that touches css/js** (currently `?v=5`).
+  on every release that touches css/js** (currently `?v=6`).
 - No CI, no build — whatever reaches the client repo is the site.
 
 ## 8. How to develop and verify (tricks that already burned us)
@@ -137,6 +137,7 @@ The real pipeline is a **two-repo setup**:
 - Headless screenshots: `chromium --headless --screenshot=… --window-size=…`. **Always wrap in `timeout 30`+** — one uncached Google-Fonts fetch once stalled a batch for 2 minutes.
 - Test EN with `?lang=en`; test persistence with `--user-data-dir=<scratch>` profile reuse (localStorage).
 - The Google Maps iframe on `contact.html` renders **blank in headless Chromium** even though the endpoint returns 200 — confirm it only in a real browser; don't chase it as a bug.
+- **`.page-head` takes exactly ONE child div.** It is `display:flex; align-items:flex-end; justify-content:space-between` — authored for a future two-column head that no page uses. With one child that alignment is a no-op; give it a second child and the shorter block (eyebrow + h1) gets bottom-aligned against the taller one, so the title appears shoved down the page. It only looks right below the 700px breakpoint, where the flex direction flips to column. Bit us on the About content pass 2026-07-28. Keep eyebrow, h1, and intro `<p>` inside the single div.
 - `git checkout <file>` as a restore drill only works AFTER the new version is committed — commit before risky experiments.
 
 ## 9. Working conventions used so far (keep them)
