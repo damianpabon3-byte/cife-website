@@ -23,7 +23,7 @@ secondary, toggleable language.
 
 - **v1** (full 7-page client draft), **v2** (client audit response), and **v3** (design refresh, 2026-07-10) are all **merged to `main` and pushed**. Working tree clean, in sync with `origin/main`.
 - **The site is DEPLOYED and LIVE.** Verified 2026-07-06: `https://centroeducativocife.com` returns 200 and serves the current `index.html` byte-for-byte (last-modified 2026-07-04, the day after the v2 merge).
-- **Current phase: waiting on the client** (the teacher) for the next feedback round and, most importantly, **real content** — final text and real photos. Nothing is blocked on our side.
+- **Current phase: the content pass, arriving page by page.** The client has started sending real copy — About Us landed 2026-07-28 (see §5). Still outstanding: services, why-us, testimonials, and real photos for the gallery. Nothing is blocked on our side.
 
 ### What v3 delivered (merged 2026-07-10)
 Client design-review response ("bland, too centered, too white, more blue/green, missing charm").
@@ -91,7 +91,13 @@ This is the most load-bearing design decision in the codebase:
 
 ## 5. Deliberate placeholders — do not "fix" them
 
-All non-homepage body copy is **intentional placeholder** marked `"Texto de ejemplo…"` / `"Example text: …"`, and the gallery uses generated SVGs. These stand in until the client sends real content. **Do not rewrite, polish, or replace them on your own initiative** — that's the client's next deliverable, and inventing content for a real institution would be worse than the placeholder. The homepage is the exception: its copy is real and approved.
+Remaining body copy marked `"Texto de ejemplo…"` / `"Example text: …"` is **intentional placeholder**, and the gallery uses generated SVGs. These stand in until the client sends real content. **Do not rewrite, polish, or replace them on your own initiative** — that's the client's next deliverable, and inventing content for a real institution would be worse than the placeholder.
+
+**Pages with real, client-supplied copy** (do not touch without a new client document):
+- **Homepage** — approved bilingual hero/section copy.
+- **About Us** — delivered 2026-07-28 from `Visión, Misión y Perfil.docx`, which arrived already bilingual (Spanish + the client's own English). Covers the intro, mission, vision, and all three value descriptions.
+  That document is also the source for CIFE's official name: **Centro Integral Formativo Educativo** / *Center for Integral Formative Education*. The site previously shipped "Centro de Instrucciones y Formación Educativa" everywhere (header alt, footer tagline, copyright, index title) — all corrected 2026-07-28. If the client ever disputes the expansion, it lives in `js/include.js`, `index.html`, and the `footer.tagline`/`footer.legalName` keys.
+  Verbatim except three transcription artifacts: double spaces, a space before a period, and a stray semicolon inside the mission's comma-parenthetical ("estrategias diversas; atemperadas") that the client's own English rendering does not have.
 
 ## 6. Known limitations / v3 candidate backlog
 
@@ -122,7 +128,7 @@ The real pipeline is a **two-repo setup**:
   `max-age=2592000` (30 days). HTML revalidates but css/js/images do NOT — a release
   that changes them without new URLs serves mixed old/new content and looks broken.
   Therefore all css/js references carry a `?v=N` query param — **bump N in all 7 pages
-  on every release that touches css/js** (currently `?v=4`).
+  on every release that touches css/js** (currently `?v=5`).
 - No CI, no build — whatever reaches the client repo is the site.
 
 ## 8. How to develop and verify (tricks that already burned us)
